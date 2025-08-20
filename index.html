@@ -233,6 +233,31 @@
             box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4), 0 0 15px rgba(0, 255, 255, 0.5);
         }
         
+        /* New image styling */
+        .image-container {
+            text-align: center;
+            margin: 30px 0;
+        }
+        
+        .embedded-image {
+            max-width: 250px;
+            border-radius: 8px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+            border: 1px solid var(--accent-aqua-dark);
+            transition: transform 0.3s ease;
+        }
+        
+        .embedded-image:hover {
+            transform: scale(1.05);
+        }
+        
+        .image-caption {
+            margin-top: 10px;
+            color: #a0f0f0;
+            font-style: italic;
+            font-size: 0.9rem;
+        }
+        
         @media (max-width: 900px) {
             .pyramid-container {
                 position: relative;
@@ -263,6 +288,10 @@
             .link-button {
                 width: 100%;
                 justify-content: center;
+            }
+            
+            .embedded-image {
+                max-width: 200px;
             }
         }
         
@@ -319,6 +348,13 @@
                 <div class="pyramid-face"></div>
                 <div class="pyramid-face"></div>
             </div>
+        </div>
+        
+        <!-- Added image container -->
+        <div class="image-container">
+            <img src="https://github.com/oeybers-cpu/a_lit_models/blob/610c7e0422ecf8a922c7d5d69e35dc1c59355156/robot.jpg?raw=true" 
+                 alt="Robot representing autonomous literacy model" class="embedded-image">
+            <p class="image-caption">The autonomous model treats literacy as mechanical skills acquisition</p>
         </div>
         
         <div class="content-section">
